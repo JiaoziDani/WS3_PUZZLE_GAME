@@ -674,8 +674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22, y: 102}
-  m_SizeDelta: {x: 414.2155, y: 407.58252}
+  m_AnchoredPosition: {x: 16, y: 92}
+  m_SizeDelta: {x: 442.517, y: 441.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389964604
 MonoBehaviour:
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 2.5, y: 2.5}
+  m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &389964605
@@ -3083,15 +3083,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 461113872900821822, guid: 0521dd1823c9cbc47996f0ba1eec4c02, type: 3}
       propertyPath: m_Color.b
-      value: 0.5140204
+      value: 0.71383643
       objectReference: {fileID: 0}
     - target: {fileID: 461113872900821822, guid: 0521dd1823c9cbc47996f0ba1eec4c02, type: 3}
       propertyPath: m_Color.g
-      value: 0.6226415
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 461113872900821822, guid: 0521dd1823c9cbc47996f0ba1eec4c02, type: 3}
       propertyPath: m_Color.r
-      value: 0.49732998
+      value: 0.7517092
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0521dd1823c9cbc47996f0ba1eec4c02, type: 3}
