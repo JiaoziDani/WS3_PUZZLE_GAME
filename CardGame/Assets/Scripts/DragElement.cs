@@ -3,12 +3,15 @@ using UnityEngine.EventSystems;
 
 public class DragElement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Transform _parentReturn = null;
+    public  Transform _parentReturn = null;
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
         _parentReturn = this.transform.parent;
         this.transform.SetParent(transform.parent.root);
+
+        // Toggle raycast blocking off
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -20,6 +23,10 @@ public class DragElement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         Debug.Log("End Drag");
         this.transform.SetParent(_parentReturn);
+
+        // Toggle raycast blocking on
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+
     }
 
 }
