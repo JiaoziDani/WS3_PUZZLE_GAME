@@ -7,8 +7,21 @@ public class DropArea : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 {
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log(eventData + " dropped");
+        //Debug.Log(eventData + " dropped");
         DragElement d = eventData.pointerDrag.GetComponent<DragElement>();
+
+        TileManager tm = FindObjectOfType<TileManager>();
+        TileData td = GetComponent<TileData>();
+        TileData[] neighbors = tm.GetTileNeighbors(td);
+
+        foreach (var neighbor in neighbors)
+        {
+            if (neighbor != null)
+            {
+                neighbor.DebugTest();
+
+            }
+        }
 
         if (d != null)
         {
