@@ -39,6 +39,11 @@ public class TileData : MonoBehaviour
     {
         Debug.Log("Howdy neighbor. This is " + _xCoord.ToString() + "," + _yCoord.ToString());
     }
+
+    public void DamageTile(CardData cardData)
+    {
+
+    }
    
 }
 
