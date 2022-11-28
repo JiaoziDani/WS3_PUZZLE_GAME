@@ -803,6 +803,7 @@ GameObject:
   - component: {fileID: 389964605}
   - component: {fileID: 389964604}
   - component: {fileID: 389964607}
+  - component: {fileID: 389964608}
   m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
@@ -955,6 +956,22 @@ MonoBehaviour:
   - {fileID: 2042858580}
   - {fileID: 1190280329}
   - {fileID: 1492095379}
+--- !u!114 &389964608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389964602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131ecd4dc91fe4ce481bba5b92285a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 2096336241542076467, guid: d7e532773ec77334e920b80d4d9b022f, type: 3}
+  _enemyScriptableObjects:
+  - {fileID: 11400000, guid: e892ff12467f8c54ab25becadaacdc05, type: 2}
+  - {fileID: 11400000, guid: 22bdaacafadda42c6ba9ee121d044b6e, type: 2}
 --- !u!224 &417230686 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 938771643227215319, guid: 47c6346bff6a55c47a8afc1cdf5de47f, type: 3}

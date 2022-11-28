@@ -10,19 +10,38 @@ public class EnemyData : MonoBehaviour
     [SerializeField]
     Image enemyArt;
 
+    CardData cd;
+
     private void Awake()
     {
-        enemyArt.sprite = scriptableObjectEnemy.art;
+        if(scriptableObjectEnemy != null)
+        {
+            enemyArt.sprite = scriptableObjectEnemy.art;
+            cd = GetComponent<CardData>();
+        }
+
     }
     // Start is called before the first frame update
     void Start()
     {
         
+        cd.topValue = scriptableObjectEnemy.topHealth;
+        cd.bottomValue = scriptableObjectEnemy.bottommHealth;
+        cd.leftValue = scriptableObjectEnemy.leftHealth;
+        cd.rightValue = scriptableObjectEnemy.rightHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        enemyArt.sprite = scriptableObjectEnemy.art;
+        cd = GetComponent<CardData>();
+    }
+
+   public void SetScriptableObject(SOEnemy enemy)
+    {
+        scriptableObjectEnemy = enemy;
+        enemyArt.sprite = scriptableObjectEnemy.art;
+        cd = GetComponent<CardData>();
     }
 }

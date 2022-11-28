@@ -4,4 +4,8 @@ using UnityEngine;
 public class SOEnemy : ScriptableObject
 {
     public Sprite art;
+    public int topHealth;
+    public int bottommHealth;
+    public int leftHealth;
+    public int rightHealth;
 }

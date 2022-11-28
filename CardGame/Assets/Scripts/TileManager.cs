@@ -59,6 +59,11 @@ public class TileManager : MonoBehaviour
         return null;
     }
 
+    public TileData[] GetAllTiles()
+    {
+        return _tiles;
+    }
+
     public TileData[] GetTileNeighbors(TileData tile)
     {
         TileData[] neighbors = new TileData[4];
