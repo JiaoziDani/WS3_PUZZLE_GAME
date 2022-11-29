@@ -39,11 +39,22 @@ public class EnemySpawner : MonoBehaviour
     {
         foreach (var tile in _tiles)
         {
-            GameObject go = Instantiate(_enemyPrefab, tile.transform.position, Quaternion.identity, tile.transform);
-            EnemyData enemy = go.GetComponent<EnemyData>();
-            int enemyIndex = Random.Range(0, _enemyScriptableObjects.Length);
-            enemy.SetScriptableObject(_enemyScriptableObjects[enemyIndex]);
-            go.transform.localScale = new Vector3(0.66f, 0.66f, 0.66f);
+            int[] coordinates = tile.GetCoordinates();
+
+            if (coordinates[0] == 0 && coordinates[1] == 4)
+            {
+
+            }
+            else
+            {
+                GameObject go = Instantiate(_enemyPrefab, tile.transform.position, Quaternion.identity, tile.transform);
+                EnemyData enemy = go.GetComponent<EnemyData>();
+                int enemyIndex = Random.Range(0, _enemyScriptableObjects.Length);
+                enemy.SetScriptableObject(_enemyScriptableObjects[enemyIndex]);
+                go.transform.localScale = new Vector3(0.66f, 0.66f, 0.66f);
+                tile._hasEnemy = true;
+                tile.enemyData = enemy;
+            }
         }
     }
 }

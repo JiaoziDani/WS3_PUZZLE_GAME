@@ -96,4 +96,40 @@ public class TileManager : MonoBehaviour
         return neighbors;
 
     }
+
+    public TileData GetTileNeighborByDirection(TileData tile, string direction)
+    {
+        int[] c = tile.GetCoordinates();
+
+        if (direction == "NORTH")
+        {
+            if (FindTile(c[0] + 1, c[1]) != null)
+            {
+                return FindTile(c[0] + 1, c[1]);
+            }
+        }
+        else if (direction == "SOUTH")
+        {
+            if (FindTile(c[0] - 1, c[1]) != null)
+            {
+                return FindTile(c[0] - 1, c[1]);
+            }
+        }
+        else if (direction == "EAST")
+        {
+            if (FindTile(c[0], c[1] - 1) != null)
+            {
+                return FindTile(c[0], c[1] - 1);
+            }
+        }
+        else if (direction == "WEST")
+        {
+            if (FindTile(c[0], c[1] + 1) != null)
+            {
+                return FindTile(c[0], c[1] + 1);
+            }
+        }
+
+        return null;
+    }
 }

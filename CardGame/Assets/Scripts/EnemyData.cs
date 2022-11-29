@@ -44,4 +44,24 @@ public class EnemyData : MonoBehaviour
         enemyArt.sprite = scriptableObjectEnemy.art;
         cd = GetComponent<CardData>();
     }
+
+    public void TakeDamage(int damage, string direction)
+    {
+        if (direction == "NORTH")
+        {
+            cd.bottomValue -= damage;
+        }
+        else if (direction == "SOUTH")
+        {
+            cd.topValue -= damage;
+        }
+        else if (direction == "EAST")
+        {
+            cd.leftValue -= damage;
+        }
+        else if (direction == "WEST")
+        {
+            cd.rightValue -= damage;
+        }
+    }
 }

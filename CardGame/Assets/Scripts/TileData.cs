@@ -10,6 +10,7 @@ public class TileData : MonoBehaviour
     private int _yCoord;
 
     public bool _hasEnemy;
+    public EnemyData enemyData;
 
     // Start is called before the first frame update
     void Start()
