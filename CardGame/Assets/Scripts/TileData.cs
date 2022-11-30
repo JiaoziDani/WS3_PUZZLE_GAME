@@ -21,7 +21,14 @@ public class TileData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (enemyData == null)
+        {
+            _hasEnemy = false;
+        }
+        else
+        {
+            _hasEnemy = true;
+        }
     }
 
     public int[] GetCoordinates()

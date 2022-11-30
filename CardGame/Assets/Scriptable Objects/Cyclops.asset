@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cyclops
   m_EditorClassIdentifier: 
   art: {fileID: 21300000, guid: 12acd7820aa76614099f8e711073cbf0, type: 3}
-  topHealth: 4
-  bottommHealth: 4
-  leftHealth: 4
-  rightHealth: 4
+  topHealth: 10
+  bottommHealth: 5
+  leftHealth: 12
+  rightHealth: 12

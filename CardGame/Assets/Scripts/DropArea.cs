@@ -22,28 +22,28 @@ public class DropArea : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             if (northTile != null)
             {
                 EnemyData northEnemy = northTile.enemyData;
-                northEnemy.TakeDamage(cardData.topValue, "NORTH");
+                northEnemy?.TakeDamage(cardData.topValue, "NORTH");
             }
 
             TileData southTile = tm.GetTileNeighborByDirection(td, "SOUTH");
             if (southTile != null)
             {
                 EnemyData southEnemy = southTile.enemyData;
-                southEnemy.TakeDamage(cardData.bottomValue, "SOUTH");
+                southEnemy?.TakeDamage(cardData.bottomValue, "SOUTH");
             }
 
             TileData eastTile = tm.GetTileNeighborByDirection(td, "EAST");
             if (eastTile != null)
             {
                 EnemyData eastEnemy = eastTile.enemyData;
-                eastEnemy.TakeDamage(cardData.rightValue, "EAST");
+                eastEnemy?.TakeDamage(cardData.rightValue, "EAST");
             }
 
             TileData westTile = tm.GetTileNeighborByDirection(td, "WEST");
             if (westTile != null)
             {
                 EnemyData westEnemy = westTile.enemyData;
-                westEnemy.TakeDamage(cardData.leftValue, "WEST");
+                westEnemy?.TakeDamage(cardData.leftValue, "WEST");
             }
 
             if (d != null)
@@ -51,6 +51,8 @@ public class DropArea : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
                 d._parentReturn = this.transform;
             }
         }
+
+        Destroy(eventData.pointerDrag.gameObject);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

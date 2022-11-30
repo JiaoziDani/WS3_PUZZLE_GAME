@@ -36,6 +36,14 @@ public class EnemyData : MonoBehaviour
     {
         enemyArt.sprite = scriptableObjectEnemy.art;
         cd = GetComponent<CardData>();
+
+        if (cd.topValue <= 0 || cd.bottomValue <= 0 || cd.leftValue <= 0 || cd.rightValue <= 0)
+        {
+            Debug.Log("Destroy");
+            HandManager hm = FindObjectOfType<HandManager>();
+            hm.AddCard();
+            Destroy(gameObject);
+        }
     }
 
    public void SetScriptableObject(SOEnemy enemy)
@@ -63,5 +71,9 @@ public class EnemyData : MonoBehaviour
         {
             cd.rightValue -= damage;
         }
+
+        
     }
+
+    
 }
