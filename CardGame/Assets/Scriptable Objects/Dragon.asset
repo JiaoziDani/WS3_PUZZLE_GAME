@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c889eb8a6fa9148b6e7292881e6b11, type: 3}
   m_Name: Dragon
   m_EditorClassIdentifier: 
-  art: {fileID: 0}
-  topHealth: 0
-  bottommHealth: 0
-  leftHealth: 0
-  rightHealth: 0
+  art: {fileID: 21300000, guid: 1d9a28c594a66cf4596ed2415782dbc9, type: 3}
+  topHealth: 6
+  bottommHealth: 15
+  leftHealth: 12
+  rightHealth: 12

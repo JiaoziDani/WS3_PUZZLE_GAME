@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Death
   m_EditorClassIdentifier: 
   art: {fileID: 21300000, guid: dc2e5184fc8cedd4fa91049fb94c9dd1, type: 3}
-  topHealth: 5
+  topHealth: 10
   bottommHealth: 10
   leftHealth: 10
-  rightHealth: 10
+  rightHealth: 5
