@@ -280,6 +280,10 @@ MonoBehaviour:
   _bottomText: {fileID: 8761667065353954963}
   _leftText: {fileID: 4304968757529299268}
   _rightText: {fileID: 6224764273446026171}
+  topValue: 0
+  bottomValue: 0
+  leftValue: 0
+  rightValue: 0
 --- !u!114 &1883442286793138965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,7 +655,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.00012207031, y: 0, z: 0, w: 0.0000076293945}
+  m_margin: {x: -3.5576172, y: 0, z: 0, w: 0.0000076293945}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -786,7 +790,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.000061035156, w: 0}
+  m_margin: {x: 0, y: 0, z: -7.337982, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
